@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="tilos.css">
+    <link rel="stylesheet" href="tilo.css">
     <link rel="stylesheet" href="font-awesome.css">
     <link rel="stylesheet" href="flexslider.css">
     <title>REGISTRO</title>
@@ -22,9 +22,9 @@
       <input type="date" name="fecha"><br>
       <label class="lbl" for="">Nacionalidad:</label><br>
       <input type="text" name="nacionalidad"><br>
-      <label class="lbl" for="">Sexo:</label><input class="sex" type="radio" name="masculino"><label class="m" for="">M</label>
-      <input class="sex" type="radio" name="femenino"><label class="m" for="">F</label>
-      <input class="sex" type="radio" name="otro"><label class="m" for="">Otro</label> <br>
+      <label class="lbl" for="">Sexo:</label><input class="sex1" type="radio" name="mfo" value="Masculino"><label class="m" for="">M</label>
+      <input class="sex2" type="radio" name="mfo" value="Femenino"><label class="m" for="">F</label>
+      <input class="sex3" type="radio" name="mfo" value="Otro"><label class="m" for="">Otro</label> <br>
       <input class="btn-primary" type="submit" name="btn" value="Enviar">
 
       <div class="flexslider">
