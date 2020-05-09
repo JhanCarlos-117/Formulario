@@ -1,31 +1,99 @@
+<?php
+	$servidor="localhost";
+	$usuario="root";
+	$clave="";
+	$baseDeDatos="formulario";
+
+	$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+
+	if(!$enlace){
+		echo"Error en la conexion con el servidor";
+	}
+?>
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Datos</title>
+    <title></title>
   </head>
   <body>
-    <?php
-    echo $_POST['nombre'];
-    echo $_POST['apellidos'];
-    echo $_POST['edad'];
-    echo $_POST['fecha'];
-    echo $_POST['nacionalidad'];
+    <table>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>nombre2</th>
+      <th>Apellido1</th>
+      <th>Apellido2</th>
+      <th>Edad</th>
+      <th>Fecha</th>
+      <th>Sexo</th>
+      <th>Nacionalidad</th>
+    </tr>
+      <?php
+        $consulta = "SELECT * FROM datos";
+        $ejecutarConsulta = mysqli_query($enlace, $consulta);
+        $verFilas = mysqli_num_rows($ejecutarConsulta);
+        $fila = mysqli_fetch_array($ejecutarConsulta);
 
-     ?>
-     <?php
-     $sexo = $_POST['mfo'];
-     if ($sexo == "Masculino") {
-       echo "Masculino";
-     }
-     else {
-       if ($sexo == "Femenino") {
-         echo "Femenino";
-       }
-       else {
-         echo "Otro";
-       }
-     }
+        if(!$ejecutarConsulta){
+          echo"Error en la consulta";
+        }else{
+          if($verFilas<1){
+            echo"<tr><td>Sin registros</td></tr>";
+          }else{
+            for($i=0; $i<=$fila; $i++){
+              echo'
+                <tr>
+                  <td>'.$fila[8].'</td>
+                  <td>'.$fila[0].'</td>
+                  <td>'.$fila[1].'</td>
+                  <td>'.$fila[2].'</td>
+                  <td>'.$fila[3].'</td>
+                  <td>'.$fila[4].'</td>
+                  <td>'.$fila[5].'</td>
+                  <td>'.$fila[6].'</td>
+                  <td>'.$fila[7].'</td>
+                </tr>
+              ';
+              $fila = mysqli_fetch_array($ejecutarConsulta);
+
+            }
+
+          }
+        }
+
+
       ?>
+</table>
+<a href="index.php"><input type="button" name="atras" value="Regresar"></a>
   </body>
 </html>
+<?php
+	if(isset($_POST['btn'])){
+		$nombre =$_POST["nombre"];
+		$nombre1=$_POST["nombre"];
+    $apellido1=$_POST["apellido1"];
+    $apellido2=$_POST["apellido2"];
+    $edad=$_POST["edad"];
+    $fecha=$_POST["fecha"];
+    $nacionalidad=$_POST["nacionalidad"];
+		$sexo=$_POST["sexo"];
+		$id= rand(1,99);
+
+		$insertarDatos = "INSERT INTO datos VALUES('$nombre',
+													'$nombre1',
+                          '$apellido1',
+                          '$apellido2',
+                          '$edad',
+                          '$fecha',
+                          '$nacionalidad',
+													'$sexo',
+													'$id')";
+
+		$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+		if(!$ejecutarInsertar){
+			echo"Error En la linea de sql";
+		}
+	}
+?>
