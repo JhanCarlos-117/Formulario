@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="tilo.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="font-awesome.css">
     <link rel="stylesheet" href="flexslider.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -38,9 +38,9 @@
     				<input type="radio" name="sexo" id="otro" value="otro">
             <label class="label-radio otro" for="otro">Otro</label>
   				</div>
-
+          
           <input type="checkbox" name="terminos" value="terminos" required/>
-          <label for="terminos">Terminos y Condiciones</label><br>
+          <a href="Terminos y Condiciones.html"><label for="terminos">Terminos y Condiciones</label><br></a>
 
           <input class="btn-info" type="reset" name="borrar" value="Borrar Informacion">
           <input class="btn-info" type="submit" name="btn" value="Siguiente">
