@@ -14,20 +14,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+		  <link rel="stylesheet" href="bootstrap.css">
+			<link rel="stylesheet" href="style.css">
     <title></title>
   </head>
   <body>
-    <table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>nombre2</th>
-      <th>Apellido1</th>
-      <th>Apellido2</th>
-      <th>Edad</th>
-      <th>Fecha</th>
-      <th>Sexo</th>
-      <th>Nacionalidad</th>
+    <table class="table table-hover" >
+    <tr class="table-primary">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Second Name</th>
+      <th>Surname</th>
+      <th>Second Surname</th>
+      <th>Age</th>
+      <th>Birthdate</th>
+			<th>nationality</th>
+      <th>Sex</th>
     </tr>
       <?php
         $consulta = "SELECT * FROM datos";
@@ -65,7 +67,7 @@
 
       ?>
 </table>
-<a href="index.php"><input type="button" name="atras" value="Regresar"></a>
+<a class="bb" href="index.php"><input class="btn btn-outline-primary" type="button" name="atras" value="Regresar"></a>
   </body>
 </html>
 <?php
