@@ -56,15 +56,15 @@
       <div class="flexslider">
         <ul class="slides">
         <li>
-        <img src="Images/HaloRGame2.jpg" height="350" width="200">
+        <img src="Images/HaloB.jpg" height="350" width="200">
         </li>
 
         <li>
-        <img src="Images/HaloRGame3.jpg" height="350" width="200">
+        <img src="Images/HaloA.jpg" height="350" width="200">
         </li>
 
         <li>
-        <img src="Images/HaloRGame4.jpg" height="350" width="200">
+        <img src="Images/HaloC.jpg" height="350" width="200">
         </li>
         </ul>
       </div>
