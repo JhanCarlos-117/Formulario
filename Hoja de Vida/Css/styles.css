@@ -20,7 +20,7 @@ div header ul {
 .Img {
     border: solid;
     height: 190px;
-    width: 99.5%;
+    width: 99.9%;
     background: #1D1D3E;
     color: #1D1D3E;
 }
@@ -28,6 +28,11 @@ div header h2 {
     margin-left: 70px;
     color: Black;
 }
+.Serv h2 {
+    text-align: center;
+    color: Black;
+}
+
 
 .Img .H1 {
     margin-left: 70px;
@@ -42,7 +47,61 @@ div header h2 {
 }
 .Acerca_Mi {
     border: solid #C1BEBE;
-    height: 360px;
-    width: 99.5%;
+    height: 300px;
+    width: 99.9%;
     background: #FDFDFD;
+}
+.Acerca_Mi table {
+    margin: auto;
+    text-align: center;
+}
+table tr th {
+    text-align: center;
+}
+.Serv {
+    border: solid #C1BEBE;
+    height: 330px;
+    width: 99.9%;
+    background: #FDFDFD;
+}
+.Serv table {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+table tbody tr {
+    text-align: center;
+}
+.Port h2 {
+    text-align: center;
+}
+.Port table {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+.Port {
+    border: solid #C1BEBE;
+    height: 370px;
+    width: 99.9%;
+    background: #FDFDFD;
+}
+tr td .Ser {
+    border-radius: 110px;
+}
+tr td .Img1 {
+    margin-top: 10px;
+}
+body div footer {
+    border: solid #9E9E9E;
+    width: 9.99;
+    height: 50px;
+    text-align: center;
+    background: #191927;
+}
+div footer p {
+    margin-top: 15px;
+    color: #FFFFFF;
 }
