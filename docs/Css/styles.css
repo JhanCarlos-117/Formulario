@@ -47,7 +47,6 @@ div header h2 {
     border-collapse: collapse;
 }
 .Acerca_Mi {
-    border: solid #C1BEBE;
     height: 250px;
     width: 99.9%;
     background: #FDFDFD;
@@ -63,7 +62,6 @@ table tr th {
     text-align: center;
 }
 .Serv {
-    border: solid #C1BEBE;
     height: 330px;
     width: 99.9%;
     background: #FDFDFD;
@@ -87,7 +85,6 @@ table tbody tr {
     margin-bottom: auto;
 }
 .Port {
-    border: solid #C1BEBE;
     height: 370px;
     width: 99.9%;
     background: #FDFDFD;
@@ -125,4 +122,74 @@ tr td .Exp {
 
 tr td .Exp {
     text-align: center;
+}
+.Inf {
+    width: 99.9%;
+    height: 200px;
+}
+.Inf .Redes_Sociales {
+    margin-left: 900px;
+    margin-top: -90px;
+
+
+
+}
+.Redes_Sociales ul a {
+    margin: 0 15px;
+}
+ul a .fa {
+    font-size: 40px;
+    transition: 6px;
+}
+ul a .fa.fa-github {
+    color: #000000;
+}
+ul a .fa.fa-instagram {
+    color: #C423D4;
+
+blue;
+}
+.Redes_Sociales ul a:hover {
+    transform: translate(0,-10);
+
+}
+.Inf2 {
+    width: 99.9%;
+}
+.Img1 {
+    cursor: pointer;
+}
+.Servicios {
+    text-align: center;
+}
+.Formulario {
+    text-align: center;
+}
+.Formulario form input {
+    margin-top: 20px;
+}
+tbody tr th {
+    margin-top: 27px;
+}
+
+
+.Formulario form table {
+    margin: auto;
+}
+tr td .Msg {
+    height: 120px;
+    margin-top: 15px;
+}
+tr td input {
+    margin-top: -16x;
+}
+tr td select {
+    margin-top: 15px;
+    margin-right: 260px;
+
+}
+.Formulario form .btn-primary.Active {
+    margin: 8px;
+    border-radius: 40px;
+    width: 90px;
 }
