@@ -1,3 +1,15 @@
+<?php
+	$servidor="localhost";
+	$usuario="root";
+	$clave="";
+	$baseDeDatos="contacto";
+
+	$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+
+	if(!$enlace){
+		echo"Error en la conexion con el servidor";
+	}
+?>
 <!doctype html>
 <html>
 <head>
@@ -37,34 +49,55 @@
 </div>
 <div class="Formulario">
 <h2>Contactenos</h2>
-<FORM action="paginabd.php" method="post">
+<FORM action="#" method="post">
 <table width="700">
   <tbody>
     <tr>
       <th width="189">Nombre</th>
-      <td width="495"><input name="nombre" type="text" required size="60" maxlength="50"></td>
+      <td width="495"><input name="nombre" type="text" size="60" maxlength="50" required/></td>
     </tr>
     <tr>
       <th>Interesado en Cual Servicio ?</th>
-      <td><select name="servicio" required="required"><option name="desW">Desarrollador Web</option>
-<option name="dess">Desarrollador de Software</option>
-<option name="disw">Diseñador de Web</option>
+      <td><select name="servicio" required="required"><option>Desarrollador Web</option>
+<option>Desarrollador de Software</option>
+<option>Diseñador de Web</option>
 </select></td>
     </tr>
     <tr>
       <th>Email</th>
-      <td></label><input name="email" type="email" required size="60" maxlength="70"></td>
+      <td></label><input name="email" type="email" size="60" maxlength="70" required/></td>
     </tr>
     <tr>
       <th>Mensaje</th>
-      <td><input  class="Msg" name="mensaje" type="text" required="required" size="60" maxlength="500"></td>
+      <td><input  class="Msg" name="mensaje" type="text" size="60" maxlength="500" required/></td>
     </tr>
   </tbody>
 </table>
-	<input name="btn" class="btn-primary Active" type="button" value="Enviar">
+<input class="btn-primary" type="submit" name="btn" value="Enviar">
 </FORM>
 </div>
 <footer><p>23/05/2020</p></footer>
 </div>  
 </body>
 </html>
+<?php
+	if(isset($_POST['btn'])){
+		$nombre =$_POST["nombre"];
+		$servicio=$_POST["servicio"];
+	    $email=$_POST['email'];
+		$mensaje=$_POST["mensaje"];
+		$id= rand(1,99);
+
+		$insertarDatos = "INSERT INTO formulario VALUES('$nombre',
+														'$servicio',
+														'$email',
+														'$mensaje',
+												      	'$id')";
+
+		$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+		if(!$ejecutarInsertar){
+			echo"Error En la linea de sql";
+		}
+	}
+?>	
